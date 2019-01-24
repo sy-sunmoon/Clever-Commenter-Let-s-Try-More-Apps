@@ -23,13 +23,13 @@ By run the follwing files, go to the keywords-extraction folder, and you can get
 
 - <code>get_ppmi_matrix.py</code> can calculate each existing APP's high level similarity , by the Soical Network theory Random Walk.
 
-- <code>loworder_similarity_to_highorder_similarity_model.py</code> can train and predict APP's high level similarity with other existing APPs
+- <code>loworder_similarity_to_highorder_similarity_model.py</code> can train and predict APP's high level similarity with other existing APPs.
 
-- <code>change_ppmi_matrix_to_similar_app.py</code> can get each APP's most similar APP's name
+- <code>change_ppmi_matrix_to_similar_app.py</code> can get each APP's most similar APP's name.
 
-- <code>convert_orl_data_to_keyword_by_Category.py</code> can get each category APPs' top non-emotional keywords and emotional keywords
+- <code>convert_orl_data_to_keyword_by_Category.py</code> can get each category APPs' top non-emotional keywords and emotional keywords.
 
-- <code>convert_orl_data_to_keyword_of_each_app_by_similar_app.py</code> can get each APP's most similar APPs' top non-emotional keywords and emotional keywords
+- <code>convert_orl_data_to_keyword_of_each_app_by_similar_app.py</code> can get each APP's most similar APPs' top non-emotional keywords and emotional keywords.
 
 ****************************************
 
