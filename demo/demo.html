@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <style>
+        .button {
+            position: relative;
+            background-color: gray;
+            border: none;
+            font-size: 14px;
+            color: #FFFFFF;
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .button:after {
+            content: "";
+            background: pink;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .button:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+        .shortselect{
+	        background:#fafdfe;
+	        height:28px;
+	        width:100px;
+	        line-height:28px;
+	        -moz-border-radius:2px;
+	        -webkit-border-radius:2px;
+	        border-radius:2px;
+}
+
+    </style>
+    <title>Model demonstration</title>
+</head>
+
+<body style="background-color: #f9f9f9; margin: auto">
+    <div class="container" style="margin: auto">
+        <div class="row" style="margin: auto">
+            <div class="col-sm-10">
+                <h2> Model demonstration </h2>
+            </div>
+        </div>
+        <div class='row' style="margin:auto">
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" id="dropdownMenu0" data-toggle="dropdown">Price
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu0" id="demolist0">
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Free</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Paid</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                    Age
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="demolist1">
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Teen</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Everyone</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">Select
+                    Categories
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="demolist">
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Communication</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Photograph</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Game</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Sports</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ibox" style="margin: auto">
+            <p> </p>
+            <div class="row" style="margin: auto">
+                <p> </p>
+
+                <div class="col-sm-4">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#input_k" data-toggle="tab" style="font-size:10pt">
+                                <i class="fa fa-vcard"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <!-- <li><a href="#review" data-toggle="tab" style="font-size:10pt">Reviews of app </a></li> -->
+                    </ul>
+                    <div id="myTabContent" class="tab-content" style="margin: auto">
+                        <div class="tab-pane fade in active" id="input_k">
+                            <!-- <textarea id="tl" rows="6" style="font-family: Arial, Helvetica, sans-serif; font-size: 13pt; width:100%; background-color: white">
+                                            </textarea> -->
+                            <form class="form-horizontal" role="form" style="background-color: white; border: none">
+                                <div class="form-group">
+                                    <label for="firstname" class="col-sm-3 control-label" style="font-size:10pt">Appname</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="firstname" placeholder="Input ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="secondname" class="col-sm-3 control-label"style="font-size:10pt">Purpose</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="secondname" placeholder="Input purpose">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="thirdname" class="col-sm-3 control-label"style="font-size:10pt">Andriod version</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="thirdname" placeholder="Input version">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button class="primary" id="sample_button" style="font-family:sans-serif; font-size: 9pt;color: white;font-weight: bold">Sample
+                        <i class="fa fa-undo"></i>
+                    </button>
+                    <p></p>
+                    <!-- <div class='col-md-100 col-lg-offset-0 col-xl-offset-5'>
+                        <span class="label label-default" id="key0" style="margin-right: 3pt;line-height:22px; font-size: 10pt">Keywords:</span>
+                        <span class="label label-default" id="key1" style="margin-right: 3pt;line-height:22px; font-size: 10pt">Keywords1</span>
+                        <span class="label label-default" id="key2" style="margin-right: 3pt;line-height:22px; font-size: 10pt">Keywords2</span>
+                        <span class="label label-default" id="key3" style="margin-right: 3pt;line-height:22px; font-size: 10pt">Keywords3</span>
+                    </div> -->
+                    <hr />
+                    <div class='col-md-100 col-lg-offset-0 col-xl-offset-5'>
+                        <span class="label label-info" id="tag25" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords
+                            of similar apps:</span>
+                        <br>
+                        <span class="label label-danger" id="tag0" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords0</span>
+                        <span class="label label-primary" id="tag1" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords1</span>
+                        <span class="label label-success" id="tag2" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords2</span>
+                        <span class="label label-primary" id="tag3" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords3</span>
+                        <span class="label label-success" id="tag4" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords4</span>
+                        <span class="label label-danger" id="tag5" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords5</span>
+                        <span class="label label-primary" id="tag6" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords6</span>
+                        <span class="label label-info" id="tag7" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords7</span>
+                        <span class="label label-warning" id="tag8" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords8</span>
+                        <span class="label label-primary" id="tag9" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords9</span>
+                        <span class="label label-success" id="tag10" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords10</span>
+                        <span class="label label-danger" id="tag11" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords11</span>
+                        <span class="label label-primary" id="tag12" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords12</span>
+                        <span class="label label-success" id="tag13" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords13</span>
+                        <span class="label label-info" id="tag14" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords14</span>
+                        <span class="label label-info" id="tag15" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords15</span>
+                        <span class="label label-success" id="tag16" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords16</span>
+                        <span class="label label-warning" id="tag17" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords17</span>
+                        <span class="label label-success" id="tag18" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords18</span>
+                        <span class="label label-info" id="tag19" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords19</span>
+                        <span class="label label-danger" id="tag20" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords20</span>
+                        <span class="label label-primary" id="tag21" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords21</span>
+                        <span class="label label-warning" id="tag22" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords22</span>
+                        <span class="label label-default" id="tag23" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords23</span>
+                        <span class="label label-danger" id="tag24" style="margin-right: 3pt;line-height:30px; font-size: 10pt">Keywords24</span>
+                    </div>
+                </div>
+                <div class='col-sm-2' style="margin: auto">
+                    <button type="button" class="btn btn-danger" id="50" style="text-align:left;font-family:sans-serif;font-size: 10pt;color: white;font-weight: bold">
+                        Generate
+                        <i class="fa fa-play"></i>
+                    </button>
+                    <!-- <button type="button" class="btn btn-success" id="100" style="text-align:left;font-family:sans-serif;font-size: 10pt;color: white;font-weight: bold">
+                        Generate<br>100
+                        <i class="fa fa-fast-forward"></i>
+                    </button>
+                    <p> </p> -->
+                </div>
+                <p> </p>
+                <div class="col-sm-6" style="margin-left: -60px">
+                    <ul id="myTab2" class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#output1" data-toggle="tab" style="font-size:10pt">
+                                Output of model
+                            </a>
+                        </li>
+                        <li><a href="#output2" data-toggle="tab" style="font-size:10pt">Output of transfer </a></li>
+                    </ul>
+                    <div id="myTabContent2" class="tab-content">
+                        <div class="tab-pane fade in active" id="output1">
+                            <textarea id="tr" rows="15" style="border: none; font-family: Arial, Helvetica, sans-serif; font-size: 13pt; width:100%; background-color: white">
+                                                    </textarea>
+                        </div>
+                        <div class="tab-pane fade" id="output2">
+                            <textarea id="tr2" rows="15" style="border: none; font-family: Arial, Helvetica, sans-serif; font-size: 13pt; width:100%; background-color: white">
+                                                    </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var profile_data = [];
+            var tab = "Profile";
+            var cat = "";
+            var cnt = -1;
+            var index = -1;
+            var base = -1;
+            $(document).ready(function () {
+                for (var i = 0; i <= 25; i++) {
+                    $('#tag' + i).hide();
+                }
+                // get data from json
+                // $.getJSON("data/review_sample.json", function (in_data) {
+                //     review_data = in_data;
+                // });
+                $.getJSON("data/profile_sample.json", function (in_data) {
+                    profile_data = in_data;
+                });
+                // $.getJSON("data/keywords.json", function (in_data) {
+                //     keyword_data = in_data
+                // });
+            });
+            console.log(profile_data);
+            // get value from click
+            $("#demolist0 a").click(function (e) {
+                e.preventDefault();
+                var selText = $(this).text();
+                $("#dropdownMenu0").text(selText);
+            });
+            $("#demolist1 a").click(function (e) {
+                e.preventDefault();
+                var selText = $(this).text();
+                $("#dropdownMenu1").text(selText);
+            });
+
+            $("#demolist a").click(function (e) {
+                e.preventDefault();
+                var selText = $(this).text();
+                $("#dropdownMenu").text(selText);
+                // tag_lst = keyword_data[selText];
+            });
+
+            $("#myTab a").click(function (e) {
+                e.preventDefault(); // cancel the link behaviour
+                var selText = $(this).text();
+                tab = $.trim(selText);
+            });
+
+            // get data when press sample button
+            $("#sample_button").click(function () {
+                // console.log(cat);
+                cnt = (cnt + 1) % profile_data.length;
+                // console.log(cnt, profile_data[cnt]);
+                var tag_lst = profile_data[cnt]["keyword"];
+                for (var i = 0; i <= 24; i++) {
+                    $('#tag' + i).hide();
+                }
+                $.each(tag_lst, function (key, value) {
+                    $('#tag' + key).text(value);
+                });
+                $('#tag25').fadeIn(500)
+                for (var i = 0; i < tag_lst.length; i++) {
+                    $('#tag' + i).fadeIn(500);
+                }
+                INPUT_SAMPLE = profile_data[cnt]["input"];
+                // console.log(INPUT_SAMPLE);
+                $("#firstname").val(INPUT_SAMPLE['app_name']);
+                $("#secondname").val(INPUT_SAMPLE['purpose']);
+                $("#thirdname").val(INPUT_SAMPLE['version']);
+                $("#tr").append('&#10;');
+                $("#tr2").append('&#10;');
+                index = -1
+                base = -1
+                // $.each(INPUT_SAMPLE, function (key, value) {
+                //     // if (key == 0) {
+                //     //     $("#tl").text(value);
+                //     // }
+                //     // else {
+                //     //     $("#tl").append(value);
+                //     // }
+                //     // $("#tl").append('&#10;');
+
+                // });
+            })
+            // console.log(profile_data[cnt])
+
+            $("#50").click(function () {
+                var generate_lst = profile_data[cnt]["50"]["output"];
+                var transfer_lst = profile_data[cnt]["50"]["output2"];
+                index = (index + 1) % generate_lst.length;
+                base = base + 1;
+                var INPUT_SAMPLE = profile_data[cnt]["50"]['output'];
+                var generate = $.trim(generate_lst[index]);
+                var transfer = $.trim(transfer_lst[index]);
+                $("#tr").append(String(base + 1) + ". " + generate);
+                $("#tr2").append(String(base + 1) + ". " + transfer);
+
+
+                $("#tr").append('&#10;&#10;');
+                $("#tr2").append('&#10;&#10;');
+            })
+            // $("#100").click(function () {
+            //     var INPUT_SAMPLE = profile_data[cnt]["100"]['output'];
+            //     $.each(INPUT_SAMPLE, function (key, value) {
+            //         if (key == 0) {
+            //             $("#tr").text(String(key + 1) + ". " + value);
+            //         }
+            //         else {
+            //             $("#tr").append(String(key + 1) + ". " + value);
+            //         }
+            //         $("#tr").append('&#10;');
+            //     });
+            //     INPUT_SAMPLE = profile_data[cnt]["100"]['output2'];
+            //     $.each(INPUT_SAMPLE, function (key, value) {
+            //         if (key == 0) {
+            //             $("#tr2").text(String(key + 1) + ". " + value);
+            //         }
+            //         else {
+            //             $("#tr2").append(String(key + 1) + ". " + value);
+            //         }
+            //         $("#tr2").append('&#10;');
+            //     });
+            // })
+            $(".js-example-basic-multiple").on('change', function () {
+                var url = $(this).val(); // get selected value
+                cat = url
+                return false;
+            });
+        });
+
+    </script>
+</body>
+
+</html>
