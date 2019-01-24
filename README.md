@@ -18,7 +18,7 @@ The model aims to find APP's most similar APPs based on Social Network theory in
 #### 1. Dataset
 In our example, we use [Google Play Store Apps Dataset](https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore_user_reviews.csv) as our source data.
 
-#### 2. keywords extracting model
+#### 2. keywords extraction model
 By run the follwing files, go to the keywords-extraction folder, and you can get each APP's most similar APP's keywords.
 
 - <code>get_ppmi_matrix.py</code> can calculate each existing APP's high level similarity , by the Soical Network theory Random Walk.
