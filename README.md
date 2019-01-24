@@ -7,7 +7,7 @@ Comments are one of the most important ways for App downloaders to understand th
 ## What is "Clever Commenter: Let's Try More Apps"
 **Clever Commenter: Let's Try More Apps** is an interesting and powerful automatic comment generator. It consists of the following modules:
 - **Key-words Extraction**: This module uses the structure data of the app (such as `Category`, `Age group`, `Price`) to find the most relevant apps based on Social Network theory instead of basic low order similarity. Then extracts the key-words of the related apps as an alternative of the newly released App. 
-- **Key-words Based Review Generator**: This module generates a review based on give key-words. Key-words are extracted by the first module or input from the App designers.
+- **Key-words Based Review Generator**: This module generates a review based on given key-words. Key-words are extracted by the first module or input from the App designers.
 - **Review Sentiment Transfer**: This module transfer a negative review into a positive review, and vice versa. In this way, "Clever Commenter: Let's Try More Apps" can control the emotion of the generated reviews.
 
 ****************************************
